@@ -18,7 +18,7 @@ Rules files (`.cursorrules`, `CLAUDE.md`) fix *what the AI knows* about your pro
 
 | Command | For | What it forces |
 |---|---|---|
-| `/fix-known-bug` | A bug you can already describe | Read the surrounding code first, apply a minimal targeted fix, verify nothing else changed |
+| `/fix-known-bug` | A bug you can already describe | Gathers full context first, proposes a fix (root cause, file, lines, risk) and stops for your approval before touching code, then verifies the implementation matches the proposal line-by-line |
 | `/investigate-complex-bug` | A bug with no obvious cause | Reproduce it, form multiple ranked hypotheses, test before fixing — not guess-and-check |
 | `/build-feature` | A new feature | Study existing patterns before writing new code, so it matches your architecture |
 | `/large-refactor` | Changes spanning many files | Map dependencies first, then proceed file-by-file with verification at each step |
