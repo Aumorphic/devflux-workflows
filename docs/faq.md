@@ -33,5 +33,11 @@ Yes — since the files are just text, you can commit them to your repository (f
 **How is this different from just writing a good prompt?**
 A prompt is a one-off instruction you have to recreate each time. A workflow file encodes the same discipline permanently, so it applies consistently without you having to remember the right phrasing on every task.
 
+**Does the AI just make changes on its own, or do I stay in the loop?**
+You stay in the loop at the moments that matter. `/fix-known-bug`, for example, stops and asks you for context before reading any code, then stops again to get your explicit approval on a proposed fix (root cause, file, exact lines, risk) before anything is implemented. It's not autonomous end-to-end — it's structured to check in at the two points where a wrong assumption would otherwise cost the most.
+
+**What's `ISSUE_CONTEXT.toon`?**
+For complex issues, the workflow can capture gathered context in a `.toon` file — [TOON (Token-Oriented Object Notation)](https://github.com/toon-format/toon) is a compact, JSON-compatible format designed to represent structured data in fewer tokens than JSON, which keeps that context cheap to carry through a longer task.
+
 **Where can I get the other five workflows?**
 The full set — `investigate-complex-bug`, `build-feature`, `large-refactor`, `add-test-coverage`, and `fix-regression` — ships with the product at [devflux.pro](https://devflux.pro). This repo includes `fix-known-bug` in full as a free sample.
